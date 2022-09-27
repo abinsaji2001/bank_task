@@ -1,0 +1,75 @@
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<div class="container-fluid">
+<header>
+    <center>
+        <img src="{% static 'img/logo2.jpg' %}" alt="logimage" width="130px;" height="130px"></a>
+        <h2 class="text-center my_tittle"> WELCOME TO HORIZON BANKk</h2>
+    </center>
+<div class="container-fluid">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="">Home</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'register' %}">Register</a></li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Branches
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur">THRISSUR</a></li>
+
+               <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam">ERNAKULAM</a></li>
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Idukki_district">IDUKKI</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottayam">KOTTAYAM</a></li>
+              <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alappuzha">ALAPPUZHA</a></li>
+
+
+                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kollam">KOLLAM</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram">THIRUVANANTHAPURAM</a></li>
+
+
+          </ul>
+        </li>
+
+
+
+        <button class="btn btn-outline-success"><a href="{% url 'login' %}" type="submit">NEXT</a></button>
+      </form>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</div>
+</header>
+    {% block content %}
+    <div>
+        <img class="my_image my_image_padding" src="{% static 'img/banner2.jpg' %}" alt="banner-image" width="1300px;">
+
+    </div>
+
+    {% endblock %}
+    <script src="{% static 'js/popper.min.js' %}" ></script>
+ <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <footer class="mt-auto">
+  <div class="footer navbar-fixed-bottom my_footer">
+    <p class="text-center" style="position"> &copy; horizon Bank Pvt LTD  all rights reserved </p>
+  </div>
+</footer>
+</div>
+

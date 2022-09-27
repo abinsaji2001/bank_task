@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <header>
+    <center>
+        <img src="{% static 'img/logo2.jpg' %}" alt="logimage" width="130px;" height="130px"></a>
+        <h2 class="text-center my_tittle"> WELCOME TO HORIZON BANK</h2>
+    </center>
+    <meta charset="UTF-8">
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </header>
+{% block content %}
+<br>
+<div class="container-fluid">
+    <h1 style="text-align:center;color:red;font-size:20px; padding:.2em;font-family:Arial; ">REGISTER</h1>
+      <img src="{% static 'img/reg.jpg' %}" alt="banner image" width="1310px;"height="400px;"><br>
+<h5><b>Horizon Bancorp (IN) is a United States-based holding company providing
+    banking services. It is engaged in providing commercial and retail banking
+    services, corporate and individual trust and agency services, and other
+    services incident to banking.</b></h5><br>
+    <form action="register" method="post"  style="background-image:url('{% static 'img/appl4.jpg' %}');text-align:center">
+    {% csrf_token %}
+        <h3 style="color:black; text-align:center;"><u>REGISTRATION</u></h3><br>
+        <label>Username : </label>
+        <input type="text" name="Username" placeholder="Enter your username"><br>
+       <br> <label>Password : </label>
+        <input type="password" name="Password" placeholder="Enter your password"><br>
+           <br><label>Confirm password :</label>
+        <input type="password" name="Password1" placeholder="Confirm your password"><br>
+          <br> <input type="submit">
+
+    </form>
+
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+    </div>
+{% endblock %}
+ <script src="{% static 'js/popper.min.js' %}" ></script>
+ <script src="{% static 'js/bootstrap.min.js' %}"></script>
+ <footer class="mx-auto">
+     <br><br>
+  <div class="footer navbar-fixed-bottom my_footer">
+    <p class="text-center" style="position"> &copy; horizon  Bank Pvt LTD  all rights reserved </p>
+  </div>
+ </footer>
+
+</html>

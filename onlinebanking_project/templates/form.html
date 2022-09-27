@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<div class="container-fluid">
+<header>
+    <center>
+        <img src="{% static 'img/logo2.jpg' %}" alt="logimage" width="130px;" height="130px"></a>
+        <h2 class="text-center my_tittle"> WELCOME TO HORIZON BANK</h2>
+    </center>
+     <script>
+        var subjectObject = {
+     "Thrissur": {
+    "Viyyur": ["Varkala", "Nedumangad", "Parassala", "Attukal"],
+    "Kanjany": ["Borders", "Margins", "Backgrounds", "Float"],
+    "Eravu": ["Variables", "Operators", "Functions", "Conditions"]
+  },
+   "Ernakulam": {
+    "Kochi": ["Varkala", "Nedumangad", "Parassala", "Attukal"],
+    "Muvattupuzha": ["Borders", "Margins", "Backgrounds", "Float"],
+    "piravom": ["Variables", "Operators", "Functions", "Conditions"]
+  },
+  "Idukki": {
+    "Adimali": ["Varkala", "Nedumangad", "Parassala", "Attukal"],
+    "Kattappana": ["Borders", "Margins", "Backgrounds", "Float"],
+    "Munnar": ["Variables", "Operators", "Functions", "Conditions"]
+  },
+
+  "Kottayam": {
+    "pala": ["Variables", "Strings", "Arrays"],
+    "kuravilangad": ["SELECT", "UPDATE", "DELETE"]
+  },
+  "Alappuzha": {
+    "Chengannur": ["Varkala", "Nedumangad", "Parassala", "Attukal"],
+    "Aroor": ["Borders", "Margins", "Backgrounds", "Float"],
+    "Cherthala": ["Variables", "Operators", "Functions", "Conditions"]
+  },
+  "Kollam": {
+    "Punalur": ["Varkala", "Nedumangad", "Parassala", "Attukal"],
+    "Kottiyam": ["Borders", "Margins", "Backgrounds", "Float"],
+    "Anchal": ["Variables", "Operators", "Functions", "Conditions"]
+  },
+
+
+ "Thiruvananthapuram": {
+    "Varkala": ["Varkala", "Nedumangad", "Parassala", "Attukal"],
+    "Nedumangad": ["Borders", "Margins", "Backgrounds", "Float"],
+    "Parassala": ["Variables", "Operators", "Functions", "Conditions"]
+  }
+
+  }
+window.onload = function() {
+  var subjectSel = document.getElementById("subject");
+  var topicSel = document.getElementById("topic");
+<!--  var chapterSel = document.getElementById("chapter");-->
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+<!--    chapterSel.length = 1;-->
+    topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }
+  }
+<!--  topicSel.onchange = function() {-->
+<!--    //empty Chapters dropdown-->
+<!--    chapterSel.length = 1;-->
+<!--    //display correct values-->
+<!--    var z = subjectObject[subjectSel.value][this.value];-->
+<!--    for (var i = 0; i < z.length; i++) {-->
+<!--      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);-->
+<!--    }-->
+<!--  }-->
+  }
+    </script>
+    <meta charset="UTF-8">
+
+</header>
+{% block content %}<br>
+<div class="container-fluid">
+    <img src="{% static 'img/reg.jpg' %}" alt="banner image" width="1290px;"height="400px;">
+    <h5><b>The company also provides commercial loans, real estate loans,
+        mortgage warehouse loans, consumer loans, and other credit facilities.
+        In addition, the company provides advances, loans, term loans,
+        overdrafts for various business purposes such as business expansion,
+        purchasing machinery and equipment, business mortgaged and others.</b></h5><br>
+<form method="Post" action="form" style="background-image:url('{% static 'img/appl4.jpg' %}');text-align:center">
+        {% csrf_token %}
+      <h3 style="color:black; text-align:center;"><u>APPLICATION</u></h3><br>
+    <label> Username :</label>
+        <input type="text" name="Username" placeholder="Enter your username" required><br>
+        <label> Name :</label>
+        <input type="text" name="Name" placeholder="Enter your name" required><br>
+    <label> DOB :     </label>
+        <input type="date" name="DOB" placeholder="Enter your DOB" required><br>
+    <label> Age :  </label>
+        <input type="number" name="Age" placeholder="Enter your age" required><br>
+    <label> Gender :  </label>
+        <input type="radio" name="Gender" value="male">Male
+        <input type="radio" name="Gender" value="female">Female<br>
+    <label>  PH :     </label>
+        <input type="number" name="Phonenumber" placeholder="Enter your phonenumber" required><br>
+    <label>  Email :   </label>
+        <input type="email" name="Mail" placeholder="Enter your mail id" required><br>
+    <label> Address : </label>
+        <input type="text" name="Address" placeholder="enter your address" required><br>
+     <label for="Account_type">Account type :</label>
+    <select name="Account_type" id="Account_type">
+        <option>select</option>
+        <option>Savings Account</option>
+
+        <option>Current Account</option>
+
+    </select><br>
+
+  District: <select name="subject" id="subject">
+    <option value="" selected="selected">Select </option>
+  </select>
+  <br><br>
+  Branches: <select name="topic" id="topic">
+    <option value="" selected="selected">Please select district first</option>
+  </select>
+  <br><br>
+      <label>Materials provide :</label><br>
+    <input type="checkbox" name="Materials Provide" value="debit card">debit card
+    <input type="checkbox" name="Materials Provide" value="credit-card">credit card
+    <input type="checkbox" name="Materials Provide" value="cheque book">cheque book<br>
+    <form name="form1" id="form1" action="/action_page.php">
+        <br>
+<!--  Chapters: <select name="chapter" id="chapter">-->
+<!--    <option value="" selected="selected">Please select topic first</option>-->
+<!--  </select>-->
+<!--  <br><br>-->
+        <input type="submit"><br>
+          <br><a href="{% url 'logout' %}" class="btn btn-danger">LOGOUT</a><br>
+    </form>
+
+
+
+
+
+
+
+
+
+
+</div>
+    <script src="{% static 'js/popper.min.js' %}" ></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <footer class="mx-auto">
+    <div class="footer navbar-fixed-bottom my_footer">
+    <p class="text-center" style="position"> &copy; horizon  Bank Pvt LTD  all rights reserved </p>
+    </div>
+    </footer>
+</div>
+{% endblock %}
+</html>

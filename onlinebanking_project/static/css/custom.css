@@ -1,0 +1,57 @@
+.my_tittle{
+font-size:16px;
+text_transform:uppercase;
+letter-spacing:.2em;
+}
+.nav-item{
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+    }
+
+.dropdown-item{
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+    }
+
+.my_custom_button{
+margin-top:5px;
+}
+.my_image={
+width:100%;
+height:auto;
+}
+
+.my_tittle{
+font-size:16px;
+text_transform:uppercase;
+letter-spacing:.2em;
+}
+
+.my_image_padding{
+padding:5px;
+}
+
+
+.my_footer{
+    background-color:#f8f9fa;
+    height:60px;
+    }
+
+.my_footer p{
+padding-top:20px;
+font-size:14px;
+}
+.my_image={
+width:100%;
+height:auto;
+}
+.my_image_padding{
+padding:5px;
+}
+.appl{
+position:fixed;
+left:50%;
+top:50%;
+}
